@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Movies List</h3>
+        <p>Drag and drop to change the order</p>
+        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">  
+          <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+            <span>{{movie.order}}</span> {{movie.name}}</div>
+        </div>
+      </div>
+      <div class="col-md-8 left">
+        <h3>Transferring items between lists</h3>
+        <p>Drag&Drop connected sorting</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <div
+              cdkDropList
+              #todoList="cdkDropList"
+              [cdkDropListData]="todo"
+              [cdkDropListConnectedTo]="[doneList]"
+              class="example-list"
+              (cdkDropListDropped)="dropTransfer($event)">
+              <div class="example-box" *ngFor="let item of todo" cdkDrag><span>{{item.order}}</span> {{item.name}}</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div
+              cdkDropList
+              #doneList="cdkDropList"
+              [cdkDropListData]="done"
+              [cdkDropListConnectedTo]="[todoList]"
+              class="example-list"
+              (cdkDropListDropped)="dropTransfer($event)">
+              <div class="example-box" *ngFor="let item of done" cdkDrag><span>{{item.order}}</span> {{item.name}}</div>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
