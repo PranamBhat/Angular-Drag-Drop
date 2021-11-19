@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-root',
@@ -18,82 +18,94 @@ export class AppComponent {
 
   movies = [
     {
-      name: 'Episode I - The Phantom Menace',
+      name: 'Test 1',
       order: 3
     },
     {
-      name: 'Episode II - Attack of the Clones',
+      name: 'Test 2',
       order: 2
     },
     {
-      name: 'Episode III - Revenge of the Sith',
+      name: 'Test 3',
       order: 4
     },
     {
-      name: 'Episode IV - A New Hope',
+      name: 'Test 4',
       order: 1
     },
     {
-      name: 'Episode V - The Empire Strikes Back',
+      name: 'Test 5',
       order: 5
     },
     {
-      name: 'Episode VI - Return of the Jedi',
+      name: 'Test 6',
       order: 6
     },
     {
-      name: 'Episode VII - The Force Awakens',
+      name: 'Test 7',
       order: 7
     },
     {
-      name: 'Episode VIII - The Last Jedi',
+      name: 'Test 8',
       order: 9
     },
     {
-      name: 'Episode IX – The Rise of Skywalker',
+      name: 'Test 9',
       order: 8
     }
   ];
 
   todo = [
     {
-      name: 'Get to work',
+      name: 'A',
       order: 1
     },
     {
-      name: 'Pick up groceries',
+      name: 'B',
       order: 4
     },
     {
-      name: 'Go home',
+      name: 'C',
       order: 2
     },
     {
-      name: 'Fall asleep',
+      name: 'D',
       order: 3
+    },
+    {
+      name: 'E',
+      order: 5
+    },
+    {
+      name: 'F',
+      order: 6
     }
   ];
 
   done = [
     {
-      name: 'Get up',
+      name: 'G',
       order: 2
     },
     {
-      name: 'Brush teeth',
+      name: 'H',
       order: 1
     },
     {
-      name: 'Take a shower',
+      name: 'I',
       order: 3
     },
     {
-      name: 'Check e-mail',
+      name: 'J',
       order: 4
     },
     {
-      name: 'Walk dog',
+      name: 'K',
       order: 5
+    },
+    {
+      name: 'L',
+      order: 6
     }
   ];
 
